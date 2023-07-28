@@ -19,6 +19,8 @@ The sdk uses Bazel to manage build targets and dependencies.
 ```sh
 bazel --version
 ```
+3. Before building the project, modify the main.cc file as required which is mentioned inside the code.
+   Change the values for required paths accordingly:
 3. Build the example binary using the following command.
 ```sh
 bazel build --cxxopt='-std=c++14' :main
