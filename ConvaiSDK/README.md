@@ -21,19 +21,20 @@ bazel --version
 ```
 3. Before building the project, modify the main.cc file as required which is mentioned inside the code.
    Change the values for required paths accordingly:
-3. Build the example binary using the following command.
+   ![ScreenShot](.repo_resources/roots.png)
+4. Build the example binary using the following command.
 ```sh
 bazel build --cxxopt='-std=c++14' :main
 ```
-4. (Windows only)Before running the project, search for "roots.pem" in the PC and copy its absolute path.
+5. (Windows only)Before running the project, search for "roots.pem" in the PC and copy its absolute path.
    Find and navigate to ssl_utils.cc file inside one of the build directories.
    Relative path: bazel-<Project-name>\external\com_github_grpc_grpc\src\core\lib\security\security_connector\ssl_utils.cc
    Change the value of the variable "installed_roots_path" to the copied path and build the project again.
-5. Now run the build using the following command.
+6. Now run the build using the following command.
 ```sh
 ./bazel-bin/main
 ```
-6. To clean the build files.
+7. To clean the build files.
 ```sh
 bazel clean
 ```
