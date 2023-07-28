@@ -4,9 +4,9 @@
 namespace logger = SKSE::log;
 
 std::unordered_map<std::string, std::string> vars = {
-    {"SKSE_DIR", "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/"}, //Update path
-    {"CONVAI_DIR", "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/"}, //Update path
-    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"} //Update path
+    {"SKSE_DIR", "Path/to/SKSE_Code/"}, //Update path
+    {"CONVAI_DIR", "Path/to/ConvaiSDK/"}, //Update path
+    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"} //Update if game is installed in a different location than default
 };
 
 std::unordered_map<std::string, std::pair<std::string, std::string>> mp = {
