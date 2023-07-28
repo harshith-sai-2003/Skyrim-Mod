@@ -21,10 +21,14 @@ using convai_sdk::proto_util::GetResponseConfigFromFile;
 using service::GetResponseRequest;
 using service::GetResponseResponse;
 
+std::unordered_map<std::string,std::string> vars={
+{"API","C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt"},//Update the path name
+{"SKSE","C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/"},//update the path name
+{"MOD_DIR","C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"}//update the path name
+};
+
 static constexpr int WAV_HEADER_SIZE = 44;
-static constexpr char GET_RESPONSE_CONFIG_FILE[] =
-    "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt";
-//C:\Users\jalad\Downloads\convaiMod\convai-sdk-cpp-master\get_response_config_example.txt
+static constexpr char GET_RESPONSE_CONFIG_FILE[] = vars["API"];
 
 int ind=0;
 std::string respText,query,dir;
@@ -113,7 +117,7 @@ void editCharacterIdValue(std::string& fileContent, const std::string& newCharac
 }
 
 void selectCharacter(std::string charID){
-  std::ifstream file("C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt");
+  std::ifstream file(vars["API"]);
     if (file.is_open()) {
         std::stringstream buffer;
         buffer << file.rdbuf();
@@ -125,7 +129,7 @@ void selectCharacter(std::string charID){
         editCharacterIdValue(fileContent, newCharacterId);
 
         // Write the updated content back to the file
-        std::ofstream outFile("C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt");
+        std::ofstream outFile(vars["API"]);
         if (outFile.is_open()) {
             outFile << fileContent;
             outFile.close();
@@ -134,7 +138,7 @@ void selectCharacter(std::string charID){
 }
 
 int main() {
-  std::string inputFile = "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/inputFile.txt";
+  std::string inputFile = vars["SKSE"] + "inputFile.txt";
   std::fstream newfile;
   newfile.open(inputFile,std::ios::in);
   std::string charName;
@@ -142,7 +146,7 @@ int main() {
   selectCharacter(charName);
   newfile.close();
 
-  std::string outputFile = "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/outputFile.txt";
+  std::string outputFile = vars["SKSE"] + "outputFile.txt";
   std::fstream outfile;
   outfile.open(outputFile,std::ios::in);
   std::getline(outfile,dir);
@@ -251,7 +255,7 @@ int main() {
       exit(1);
     }
 
-    std::string outputFileName = "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"+dir+"/convaiQues_convaiQuestDial_00000804_1.wav";
+    std::string outputFileName = vars["MOD_DIR"] +dir+"/convaiQues_convaiQuestDial_00000804_1.wav";
     ConcatenateByteStreamsToWav(files,outputFileName);
     files.clear();
     transform(query.begin(), query.end(), query.begin(), ::tolower);
