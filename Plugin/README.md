@@ -3,3 +3,4 @@ SSE Fixes for Creation Kit(<a href="https://www.nexusmods.com/skyrimspecialediti
 
 # Setup
 Extract the folder and copy this "Data" folder inside the game directory and let it overwrite the folder.
+Done
