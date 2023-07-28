@@ -22,13 +22,13 @@ using service::GetResponseRequest;
 using service::GetResponseResponse;
 
 std::unordered_map<std::string, std::string> vars = {
-    {"API", "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt"},   // Update the path name
-    {"SKSE", "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/"},   // update the path name
+    {"API", "Path/to/get_response_config_example.txt"},   // Update the path name
+    {"SKSE", "Path/to/SKSE-Code/"},   // update the path name
     {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"}   // update the path name
 };
 
 static constexpr int WAV_HEADER_SIZE = 44;
-static constexpr char GET_RESPONSE_CONFIG_FILE[] = "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/get_response_config_example.txt";//Update the path name
+static constexpr char GET_RESPONSE_CONFIG_FILE[] = "Path/to/get_response_config_example.txt";//Update the path name
 
 int ind = 0;
 std::string respText, query, dir;
