@@ -50,7 +50,7 @@ It will _automatically_ download [CommonLibSSE NG](https://github.com/CharmedBar
 # Project setup
 
 Update the path variables in plugin.cpp file before building:
-![ScreenShot](.resources/pic1.png)
+![ScreenShot](.resources/pic1.jpg)
 
 By default, when this project compiles it will output a `.dll` for your SKSE plugin into the `build/` folder.
 
