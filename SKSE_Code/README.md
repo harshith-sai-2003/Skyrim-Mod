@@ -2,6 +2,8 @@
 
 C++ SKSE plugin for Skyrim!
 
+Video Tutorial : [SKSE Setup](https://youtu.be/rTN9bAB2S9A)
+
 ---
 
 - [SKSE "Hello, world!"](#skse-hello-world)
