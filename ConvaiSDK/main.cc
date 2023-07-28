@@ -23,8 +23,8 @@ using service::GetResponseResponse;
 
 std::unordered_map<std::string, std::string> vars = {
     {"API", "Path/to/get_response_config_example.txt"},   // Update the path name
-    {"SKSE", "Path/to/SKSE-Code/"},   // update the path name
-    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"}   // update the path name
+    {"SKSE", "Path/to/SKSE_Code/"},   // update the path name
+    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"}   // update the path if the game is installed in a different location than default
 };
 
 static constexpr int WAV_HEADER_SIZE = 44;
