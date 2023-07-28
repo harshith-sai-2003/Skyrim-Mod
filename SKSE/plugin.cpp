@@ -4,9 +4,9 @@
 namespace logger = SKSE::log;
 
 std::unordered_map<std::string, std::string> vars = {
-    {"SKSE_DIR", "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/"}, 
-    {"CONVAI_DIR", "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/"}, 
-    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"}
+    {"SKSE_DIR", "C:/Users/jalad/Downloads/convaiMod/SKSE_Template_HelloWorld-main/"}, //Update path
+    {"CONVAI_DIR", "C:/Users/jalad/Downloads/convaiMod/convai-sdk-cpp-master/"}, //Update path
+    {"MOD_DIR", "C:/Program Files (x86)/Steam/steamapps/common/Skyrim Special Edition/Data/Sound/Voice/convaiNPCMod.esp/"} //Update path
 };
 
 std::unordered_map<std::string, std::pair<std::string, std::string>> mp = {
@@ -897,7 +897,7 @@ void ExecuteExternalProcess(const std::string& executablePath) {
     if (monitorDirectory(directoryPath)) {
         //place the callback here
         RE::CrosshairPickData* npc = RE::CrosshairPickData::GetSingleton();
-        SKSE::ModCallbackEvent modEvent{"ResponseGenerated", "Your mom", 600, nullptr};
+        SKSE::ModCallbackEvent modEvent{"ResponseGenerated", "", 600, nullptr};
         SKSE::GetModCallbackEventSource()->SendEvent(&modEvent);
         auto sm = RE::SubtitleManager::GetSingleton();
         RE::BSTArray<RE::SubtitleInfo> si = sm->subtitles;
@@ -917,11 +917,10 @@ void ExecuteExternalProcess(const std::string& executablePath) {
 }
 
 std::string MyNativeFunction(RE::StaticFunctionTag*, RE::TESForm* sender, std::string targetName) {
-    SKSE::ModCallbackEvent modEvent1{"GetActor", "Your mom", 600, sender};
+    SKSE::ModCallbackEvent modEvent1{"GetActor", "", 600, sender};
     SKSE::GetModCallbackEventSource()->SendEvent(&modEvent1);
     updateFiles(targetName);
     std::string executablePath = vars["CONVAI_DIR"] + "bazel-bin/main.exe ";
-    //C:\Users\jalad\Downloads\convaiMod\convai-sdk-cpp-master\bazel-bin\main.exe
     std::thread processThread(ExecuteExternalProcess, executablePath);
     
      //Check if the process has finished executing
@@ -929,27 +928,18 @@ std::string MyNativeFunction(RE::StaticFunctionTag*, RE::TESForm* sender, std::s
          //Process is still running, detach the thread and let it continue in the background
         processThread.detach();
     }
-    
-    //processThread.join();
     return resp;
 }
 
 
 bool BindPapyrusFunctions(RE::BSScript::IVirtualMachine* vm) {
-    vm->RegisterFunction("MyNativeFunction", "HelloWorldScript", MyNativeFunction);
-    vm->RegisterFunction("MyNativeFunction", "Voice", MyNativeFunction);
-    vm->RegisterFunction("MyNativeFunction", "idiotScriptNew", MyNativeFunction);
     vm->RegisterFunction("MyNativeFunction", "ConvaiEffectScript", MyNativeFunction);
-    //vm->RegisterFunction("MyNativeFunction", "iWant_Widgets_Demo", MyNativeFunction);
     return true;
 }
 
 SKSEPluginLoad(const SKSE::LoadInterface* skse) {
     SKSE::Init(skse);
     SetupLog();
-
-    //SKSE::GetMessagingInterface()->RegisterListener(onMessage);
     SKSE::GetPapyrusInterface()->Register(BindPapyrusFunctions);
-
     return true;
 }
