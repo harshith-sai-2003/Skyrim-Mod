@@ -1,0 +1,26 @@
+character_id: "8f8b546e-2c60-11ee-8f76-42010a40000b"
+api_key: "256a44955b3b3a96223544887551fff3"
+audio_config {
+    sample_rate_hertz: 44100
+}
+action_config {
+    actions: "Kill"
+    actions: "Close"
+    actions: "Smash"
+
+    objects {
+        name: "Faida"
+        description: "Faida commited an offence against the dark brother hood and must be killed!"
+    }
+
+    characters {
+        name: "AI Character"
+        bio: "A valet who can open and close doors"
+    }
+    characters {
+        name: "User"
+        bio: "A person who likes doors being opened and closed for them."
+    }
+
+    classification: "multistep"
+}
