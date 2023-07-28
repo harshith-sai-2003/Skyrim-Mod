@@ -49,6 +49,9 @@ It will _automatically_ download [CommonLibSSE NG](https://github.com/CharmedBar
 
 # Project setup
 
+Update the path variables in plugin.cpp file before building:
+![ScreenShot](.resources/pic1.png)
+
 By default, when this project compiles it will output a `.dll` for your SKSE plugin into the `build/` folder.
 
 If you want to configure this project to output your plugin files
@@ -95,11 +98,3 @@ The `CODE_OF_CONDUCT.md` defaults to using the [Contributor Covenant](https://ww
 If you'd like to know more about open source licenses, see:
 - [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [Choose an open source license](https://choosealicense.com/)
-
-# Sharing is Caring
-
-**If you use this template, PLEASE release your project as a public open source project.** 💖
-
-**Please do not release your SKSE plugin on Nexus/etc without making the source code available** \*
-
-> \* _You do you. But please help our community by sharing your source `<3`_
