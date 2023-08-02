@@ -21,7 +21,7 @@ Once the setup is complete, follow these steps to experience the mod in-game:
 
 1. Launch Skyrim and load your desired game save or start a new game.
 
-2. To quickly jump to any location, open the console by pressing the '`' key and type 'coc <place-name>'.
+2. To quickly jump to any location, open the console by pressing the '`' key and type 'coc \<place-name\>'.
 
 3. Wait for the "Convai spell added" message to appear on the top left corner of the screen. This process may take a moment to complete.
 
