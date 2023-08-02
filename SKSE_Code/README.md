@@ -38,7 +38,7 @@ Because this uses [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSS
     - Name: `VCPKG_ROOT`  
       Value: `C:\path\to\wherever\your\vcpkg\folder\is`
 
-<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/VCPKG_ROOT.png" height="150">
+<img src="https://raw.githubusercontent.com/harshith-sai-2003/Images/main/images/screenshots/Setting%20Environment%20Variables/VCPKG_ROOT.png" height="150">
 
 ## Opening the project
 
