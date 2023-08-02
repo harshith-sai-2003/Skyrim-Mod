@@ -38,7 +38,7 @@ Because this uses [CommonLibSSE NG](https://github.com/CharmedBaryon/CommonLibSS
     - Name: `VCPKG_ROOT`  
       Value: `C:\path\to\wherever\your\vcpkg\folder\is`
 
-<img src="https://raw.githubusercontent.com/harshith-sai-2003/Images/main/images/screenshots/Setting%20Environment%20Variables/VCPKG_ROOT.png" height="150">
+<img src=".resources/VCPKG_ROOT.png" height="150">
 
 ## Opening the project
 
@@ -62,7 +62,7 @@ into your Skyrim Special Edition's "`Data`" folder:
 - Set the `SKYRIM_FOLDER` environment variable to the path of your Skyrim installation  
   e.g. `C:\Program Files (x86)\Steam\steamapps\common\Skyrim Special Edition`
 
-<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/SKYRIM_FOLDER.png" height="150">
+<img src=".resources/SKYRIM_FOLDER.png" height="150">
 
 If you want to configure this project to output your plugin files
 into your "`mods`" folder:  
@@ -72,7 +72,7 @@ into your "`mods`" folder:
   e.g. `C:\Users\<user>\AppData\Local\ModOrganizer\Skyrim Special Edition\mods`  
   e.g. `C:\Users\<user>\AppData\Roaming\Vortex\skyrimse\mods`
 
-<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Setting%20Environment%20Variables/SKYRIM_MODS_FOLDER.png" height="150">
+<img src=".resources/SKYRIM_MODS_FOLDER.png" height="150">
 
 ## Finding Your "`mods`" Folder
 
@@ -80,11 +80,7 @@ In Mod Organizer 2:
 
 > Click the `...` next to "Mods" to get the full folder path
 
-<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/MO2/MO2SettingsModsFolder.png" height="150">
-
-In Vortex:
-
-<img src="https://raw.githubusercontent.com/SkyrimDev/Images/main/images/screenshots/Vortex/VortexSettingsModsFolder.png" height="150">
+<img src=".resources/MO2SettingsModsFolder.png" height="150">
 
 # Setup your own repository
 
