@@ -36,3 +36,12 @@ Once the setup is complete, follow these steps to experience the mod in-game:
 8. The spell can be cast repeatedly, allowing you to engage in extended conversations with the NPCs.
 
 Enjoy the immersive and interactive experience offered by this Skyrim mod! Feel free to explore the world and interact with various characters to uncover unique dialogues and quests.
+
+## Credits
+### Discord servers and individual developers
+Special thanks to the following communities and the developers who helped me during the project:-
+1. [https://discord.gg/Hgn7wUkT](Mrowr Purr) - (megaman2k#2000,  rustydwemer#7733,  EXIT#3315,  zbigdogz#0718)
+2. [https://discord.gg/SAWr9zA4](Mantella) - (Art From The Machine#9578,  hey_danielx#3288,  Pendrokar#3469)
+3. [https://discord.gg/7DaY5N3F](Dwemer Dynamics) - (tyler.maister#2143)
+4. [https://discord.gg/jf4ppAaE](SkyrimSE RE)
+5. [https://discord.gg/7RSR8SfT](xVASynth)
